@@ -1,1 +1,7 @@
 <h1>Welcome to Activate</h1>
+<p>We current support the following organizations</p>
+<ul>
+<% @organizations.each do |organization| %>
+  <li><%= link_to organization.title, organization.url %></li>
+<% end %>
+</ul>
