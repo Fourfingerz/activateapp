@@ -8,7 +8,7 @@
 development:
   adapter: postgresql
   encoding: utf8
-  database: activateapp_development
+  database: actionable_development
   pool: 5
  
 
@@ -18,12 +18,12 @@ development:
 test:
   adapter: postgresql
   encoding: utf8
-  database: activateapp_test
+  database: actionable_test
   pool: 5
   
 
 production:
   adapter: postgresql
   encoding: utf8
-  database: activateapp_production
+  database: actionable_production
   pool: 5
