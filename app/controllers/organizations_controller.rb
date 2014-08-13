@@ -4,12 +4,17 @@ class OrganizationsController < ApplicationController
   # GET /organizations
   # GET /organizations.json
   def index
-    @organizations = Organization.all
+   if params[:search]
+    @organizations = Organization.search(params[:search]).order("created_at DESC")
+  else
+    @organizations = Organization.all.order('created_at DESC')
   end
+end
 
   # GET /organizations/1
   # GET /organizations/1.json
   def show
+    @organization = Organization.find(params[:id])
   end
 
   # GET /organizations/new
@@ -25,7 +30,8 @@ class OrganizationsController < ApplicationController
   # POST /organizations.json
   def create
     @organization = Organization.new(organization_params)
-
+  end
+ 
     respond_to do |format|
       if @organization.save
         format.html { redirect_to @organization, notice: 'Organization was successfully created.' }
@@ -71,4 +77,3 @@ class OrganizationsController < ApplicationController
     def organization_params
       params.require(:organization).permit(:title, :url)
     end
-end
