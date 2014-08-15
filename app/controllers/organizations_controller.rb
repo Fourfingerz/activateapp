@@ -30,7 +30,6 @@ end
   # POST /organizations.json
   def create
     @organization = Organization.new(organization_params)
-  end
  
     respond_to do |format|
       if @organization.save
@@ -77,3 +76,4 @@ end
     def organization_params
       params.require(:organization).permit(:title, :url)
     end
+  end
