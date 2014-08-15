@@ -6,3 +6,11 @@
   <%= submit_tag "Search", :name => nil %>
   <% end %>
 </h4>
+<h5 id="sign-in"><%= form_tag(@user) do %>
+  <%= label_tag 'email', 'Email' %>
+  <%= text_field_tag 'email'%>
+  <%= label_tag 'password', 'Password' %>
+  <%= password_field_tag 'password' %>
+  <%= submit_tag "Sign In"%>
+<% end %>
+</h5>
