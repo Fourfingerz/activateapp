@@ -3,8 +3,4 @@ class Organization < ActiveRecord::Base
     where("title ilike ?", "%#{query}%") 
   end
 
-  create_table :Organization do |t|
-  	t.column :title, :string
-  end
-
 end
