@@ -74,6 +74,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def organization_params
-      params.require(:organization).permit(:title, :url)
+      params.require(:organization).permit(:title, :url, :mission, :address, :address_2, :ein, :telephone, :contact, :ntee_category, :ruling_year)
     end
   end
