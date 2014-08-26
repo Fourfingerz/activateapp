@@ -12,5 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require search
 //= require turbolinks
 //= require_tree .
+
+window.$ = jQuery;
+
+console.log('App started');

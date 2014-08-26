@@ -3,16 +3,9 @@
 <head>
   <title>Activate</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-	<script src="js/jquery/jquery-1.7.1.min.js"></script>
-	<script src="js/jquery/jquery.ui.core.min.js"></script>
-	<script src="js/jquery/jquery.ui.widget.min.js"></script>
-	<script src="js/jquery/jquery.ui.position.min.js"></script>
-	<script src="js/jquery/jquery.ui.autocomplete.min.js"></script>
 
-<link rel="stylesheet" href="js/jquery/smoothness/jquery-ui-1.8.16.custom.css"/>
 <body>
   
   <% if notice %>
@@ -23,6 +16,9 @@
 <% end %>
 
 <%= yield %>
+
+
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
 </body>
 </html>

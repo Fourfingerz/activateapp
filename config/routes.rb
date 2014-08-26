@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :organizations do
   end
   
+  match 'pages/loginGuidestar', to: 'pages#loginGuidestar', via: [:get, :post]
+
   get 'pages/home'
 
   # The priority is based upon order of creation: first created -> highest priority.

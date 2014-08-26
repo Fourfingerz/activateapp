@@ -9,7 +9,7 @@ class OrganizationsController < ApplicationController
   else
     @organizations = Organization.all.order('created_at DESC')
   end
-end
+
 
   # GET /organizations/1
   # GET /organizations/1.json
@@ -74,6 +74,7 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def organization_params
-      params.require(:organization).permit(:title, :url, :mission, :address, :address_2, :ein, :telephone, :contact, :ntee_category, :ruling_year)
+      params.require(:organization).permit(:title, :url, :mission, :address, :address_2, :city, :state, :zip, :ein, :telephone, :contact, :ntee_category, :keywords, :categories, :sub_categories, :ruling_year)
     end
   end
+end

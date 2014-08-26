@@ -1,10 +1,16 @@
 <h1 id="actionable">Actionable</h1>
 <h2><%= link_to 'Directory', controller: 'organizations', action: 'index' %></h2>
 <h3 id="studio">Monorail Dinosaur Studios @2014</h3>
-<h4 id="search-box"><%= form_tag(organizations_path, :method => "get") do %>
-  <%= text_field_tag :search, params[:search], placeholder: "Search Organizations" %>
-  <%= submit_tag "Search", :name => nil %>
-  <% end %>
+
+<%=form_for :pages, :url => { :controller => :pages, :action => :loginGuidestar } do |f| %>
+    <div class="field">
+      <%= f.label :search_term %><br />
+      <%= f.text_field :search_term %>
+    </div> 
+  <div class="actions">
+    <%= f.submit %>
+<% end %>
+
 </h4>
 <h5 id="sign-in"><%= form_tag(@user) do %>
   <%= label_tag 'email', 'Email' %>
