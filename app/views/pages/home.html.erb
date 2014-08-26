@@ -2,7 +2,8 @@
 <h2><%= link_to 'Directory', controller: 'organizations', action: 'index' %></h2>
 <h3 id="studio">Monorail Dinosaur Studios @2014</h3>
 
-<%=form_for :pages, :url => { :controller => :pages, :action => :loginGuidestar } do |f| %>
+<%# This is the search field for user queries %>
+<%=form_for :pages, :url => { :controller => :pages, :action => :loginGuidestar } do |f| %> 
     <div class="field">
       <%= f.label :search_term %><br />
       <%= f.text_field :search_term %>

@@ -25,11 +25,6 @@ class PagesController < ApplicationController
 
 	  @response = response.body
 	  @hash = @response
-	  ##New Code 8/26/14
-	  #@json = hash.to_json
 	end
-
-
-
 end
 end
