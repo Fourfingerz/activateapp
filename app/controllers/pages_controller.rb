@@ -24,7 +24,9 @@ class PagesController < ApplicationController
 	  puts response.body
 
 	  @response = response.body
-	  @hash = @response
+	  @hash = ActiveSupport::JSON.decode(@response)
+
 	end
+
 end
 end

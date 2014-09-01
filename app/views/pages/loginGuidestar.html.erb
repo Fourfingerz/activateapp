@@ -1,8 +1,43 @@
 <div style="background: white">
 	<h1>Search result for: <%= params['pages']['search_term'] %></h1>
 	<div id="my-final-table">
-		<%= @response %>
+  		<table>
+  <thead>
+    <tr>
+      <th>Organization Name</th>
+      <th>Organization ID</th>
+      <th>EIN Number</th>
+      <th>Mission</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip Code</th>
+      <th>NTEE Code</th>
+      <th>IRS Subsection</th>
+      <th>MSA</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+
+  <tbody>
+    <% @hash["hits"].each do |hash| %>
+      <tr>
+        <td><%= hash["organization_name"] %></td>
+        <td><%= hash["organization_id"] %></td>
+        <td><%= hash["ein"] %></td>
+        <td><%= hash["mission"] %></td>
+        <td><%= hash["city"] %></td>
+        <td><%= hash["state"] %></td>
+        <td><%= hash["zip"] %></td>
+        <td><%= hash["nteecode"] %></td>
+        <td><%= hash["irs_subsection"] %></td>
+        <td><%= hash["msa"] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+	
+
 	</div>
-
-
 </div>

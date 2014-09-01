@@ -48,6 +48,8 @@ gem 'bootstrap'
 gem 'nokogiri'
 gem 'hashie'
 
+gem 'builder', '~> 3.2.1'
+
 #gem 'guidestar-ruby'
 
 # Use ActiveModel has_secure_password
